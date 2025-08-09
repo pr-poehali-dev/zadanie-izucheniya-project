@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
@@ -83,10 +84,12 @@ const Profile = () => {
             </div>
             
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm">
-                <Icon name="Home" size={16} className="mr-2" />
-                Главная
-              </Button>
+              <Link to="/">
+                <Button variant="ghost" size="sm">
+                  <Icon name="Home" size={16} className="mr-2" />
+                  Главная
+                </Button>
+              </Link>
               <Button variant="ghost" size="sm">
                 <Icon name="Bell" size={16} className="mr-2" />
                 Уведомления
